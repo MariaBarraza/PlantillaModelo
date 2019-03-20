@@ -1,5 +1,8 @@
 #pragma once
 
+//--------------------------------------------------------Las clases van con la primera letra MAYUSCULA--------------------------------------------------------
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #define GLEW_STATIC
@@ -12,14 +15,21 @@
 
 using namespace std;
 
+
 class Modelo {
+
 public:
+
 	vector<Vertice> vertices;
 	Shader *shader;
 	GLuint vertexArrayID;
 	GLuint bufferID;
 
+
 	Modelo();
-	void inizializarVertexArray(GLuint posicionID,GLuint ColorID);
+
+	void inicializarVertexArray(GLuint posicionID, GLuint colorID);
+
 	void dibujar(GLenum modoDibujo);
+		
 };
