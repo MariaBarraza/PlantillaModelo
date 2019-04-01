@@ -15,20 +15,23 @@
 
 using namespace std;
 
-
+//aqui no se ocupa incluir glm porque ya esta vinculado en vertice y se uso pragma once
 class Modelo {
 
 public:
 
 	vector<Vertice> vertices;
+	glm::mat4 transformaciones;
+
 	Shader *shader;
 	GLuint vertexArrayID;
 	GLuint bufferID;
+	GLuint transformacionesID;
 
 
 	Modelo();
 
-	void inicializarVertexArray(GLuint posicionID, GLuint colorID);
+	void inicializarVertexArray(GLuint posicionID, GLuint colorID,GLuint transformacionesID);
 
 	void dibujar(GLenum modoDibujo);
 		
